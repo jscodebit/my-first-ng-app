@@ -1,2 +1,26 @@
+<button
+class="btn btn-primary"
+[disabled]="!allowNewServer"
+(click)="onCreateServer()">Add Server</button>
+<!-- <input
+  type="text"
+  class="form-control"
+  (input)="onCreateServerInput($event)"> -->
+  <input
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
+<p>{{serverName}}</p>
+<p>{{serverCreationStatus}}</p>
+<label for="userName">UserName :  </label>
+<input
+  id="userName"
+  type="text"
+  [(ngModel)]="userName">
+<p>{{userName}}</p>
+<button
+  class="btn btn-info"
+  [disabled]="(userName === '') ? true : false"
+  (click)="this.userName = ''">reset</button>
 <app-server></app-server>
 <app-server></app-server>
