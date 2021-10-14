@@ -22,5 +22,5 @@ class="btn btn-primary"
   class="btn btn-info"
   [disabled]="(userName === '') ? true : false"
   (click)="this.userName = ''">reset</button>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
+

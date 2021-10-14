@@ -2,3 +2,10 @@
 <div app-servers></div>
 <app-warning-alert></app-warning-alert>
 <app-success-alert></app-success-alert>
+<button class="btn btn-primary" (click)="trackLog()">Display Details</button>
+<p *ngIf="showSecret">Secret Password = tuna</p>
+<p
+*ngFor="let logItem of log; let i = index"
+[ngStyle]="{backgroundColor: i >=5 ? 'blue': 'transparant'}"
+[ngClass]="{textWhite: i >= 5}"
+>{{logItem}}</p>
